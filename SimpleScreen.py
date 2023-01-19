@@ -66,35 +66,18 @@ def main():
         ##print(f"Today is {usefullist[0]} {usefullist[1]}")
         print(date.today())
         print("Welcome to Cascade Health Services!")
+        name = input("Enter your full legal name: ")
+        age = input("What is your current age: ")
         print("What are you visiting for? ")
         option = main_menu()
         if option == 0:
-            name = input("Full Legal Name: ")
-            age = input("Age: ")
             if int(age) < 0 or int(age) > 100:
                 break
             print("Who do you have your appointment with?")
             sec_option = doctor_menu()
-            if sec_option == 0:
-                print(name, "--", age)
-                print("Great, Dr. Bishop will see you now!")
-                break
-            if sec_option == 1:
-                print(name, "--", age)
-                print("Great, Dr. Malak will see you now!")
-                break
-            if sec_option == 2:
-                print(name, "--", age)
-                print("Great, Dr. Sanders will see you now!")
-                break
-            if sec_option == 3:
-                print(name, "--", age)
-                print("Great, Dr. Gray will see you now!")
-                break
-            if sec_option == 4:
-                print(name, "--", age)
-                print("Great, Dr. Kumar will see you now!")
-                break
+            print(name, "--", age)
+            print(f"Great, {doc_list[sec_option]} will see you now!")
+            break
         if option == 1:
             print("Great, who would you want to meet with?")
             sec_option = doctor_menu()
