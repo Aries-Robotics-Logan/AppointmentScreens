@@ -1,5 +1,5 @@
 from datetime import date
-
+from random import randint
 
 def main_menu():
     menu = [
@@ -84,7 +84,7 @@ def main():
             print(f"Okay, so {doc_list[sec_option]} is actually busy for a while. Can you do next month?")
             answer = input("(Y/y) for yes or (N/n) for no: ")
             if answer.upper() == "Y":
-                print("Great! We will put you down for the 23rd of next month at 11:00 am")
+                print(f"Great! We will put you down for the {randint(1, 28)} of next month at {randint(7,11)} am")
                 break
         if option == 2:
             print("Haha")
