@@ -1,5 +1,7 @@
 from datetime import date
 from random import randint
+from Functions import show_menu, get_valid_input
+
 
 def main_menu():
     menu = [
@@ -12,11 +14,6 @@ def main_menu():
     return get_valid_input(range(len(menu)))
 
 
-def show_menu(menu):
-    for index, option in enumerate(menu):
-        print(f'({index}) {option}')
-
-
 def doctor_menu():
     dmenu = [
         "Dr. Bishop (Podiatry)",
@@ -27,20 +24,6 @@ def doctor_menu():
     ]
     show_menu(dmenu)
     return get_valid_input(range(len(dmenu)))
-
-
-def get_valid_input(valid_inputs):
-    while True:
-        response = input('Option: ').strip()
-        if not response.isdigit():
-            print(f'Invalid option: {response}')
-            continue
-        response = int(response)
-        if response not in valid_inputs:
-            print(f'Invalid option: {response}')
-            continue
-
-        return response
 
 
 ##def day():
