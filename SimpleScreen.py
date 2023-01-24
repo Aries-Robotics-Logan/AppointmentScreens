@@ -1,6 +1,6 @@
 from datetime import date
 from random import randint
-from Functions import show_menu, get_valid_input, datify
+from Functions import show_menu, get_valid_input, datify, prepareforapp
 
 
 def main_menu():
@@ -73,6 +73,7 @@ def main():
                 answer = input("(Y/y) for yes or (N/n) for no: ")
                 if answer.upper() == "Y":
                     print(f"Great! We will put you down for the {datify(number)} of next month at {time} am")
+                    prepareforapp(name, age, doc_list[sec_option], datify(number), time)
                     test = 1
                     break
                 elif answer.upper() == "N":

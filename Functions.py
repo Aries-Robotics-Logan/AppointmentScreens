@@ -26,3 +26,12 @@ def datify(number):
         return str(number) + "rd"
     if (number >= 4 and number <= 20) or number >= 24:
         return str(number) + "th"
+
+
+def prepareforapp(name, age, doctor, date, time):
+    print()
+    print(f"Appointment Info:")
+    print(f"Name: {name}")
+    print(f"Age: {age}")
+    print(f"Doctor: {doctor}")
+    print(f"Appointment: {date} @ {time} am")
