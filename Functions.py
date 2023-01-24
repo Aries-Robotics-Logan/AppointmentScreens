@@ -18,19 +18,11 @@ def get_valid_input(valid_inputs):
 
 
 def datify(number):
-    if number == 1:
+    if number == 1 or number == 21:
         return str(number) + "st"
-    if number == 2:
+    if number == 2 or number == 22:
         return str(number) + "nd"
-    if number == 3:
+    if number == 3 or number == 23:
         return str(number) + "rd"
-    if number >= 4 and number <= 20:
-        return str(number) + "th"
-    if number == 21:
-        return str(number) + "st"
-    if number == 22:
-        return str(number) + "nd"
-    if number == 23:
-        return str(number) + "rd"
-    if number >= 24:
+    if (number >= 4 and number <= 20) or number >= 24:
         return str(number) + "th"

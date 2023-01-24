@@ -62,13 +62,22 @@ def main():
             print(f"Great, {doc_list[sec_option]} will see you now!")
             break
         if option == 1:
+            test = 0
             print("Great, who would you want to meet with?")
             sec_option = doctor_menu()
-            print(f"Okay, so {doc_list[sec_option]} is actually busy for a while. Can you do next month?")
-            answer = input("(Y/y) for yes or (N/n) for no: ")
-            if answer.upper() == "Y":
-                print(f"Great! We will put you down for the {datify(randint(1, 20))} of next month at {randint(7,11)} am")
-                break
+            print(f"Okay, so {doc_list[sec_option]} is actually busy for a while.")
+            while test != 1:
+                number = randint(1, 28)
+                time = randint(7, 11)
+                print(f"Can you do the {datify(number)} of next month at {time} am?")
+                answer = input("(Y/y) for yes or (N/n) for no: ")
+                if answer.upper() == "Y":
+                    print(f"Great! We will put you down for the {datify(number)} of next month at {time} am")
+                    test = 1
+                    break
+                elif answer.upper() == "N":
+                    continue
+            break
         if option == 2:
             print("Haha")
         if option == 3:
