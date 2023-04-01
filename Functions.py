@@ -17,6 +17,16 @@ def get_valid_input(valid_inputs):
         return response
 
 
+def ager(number):
+    if int(number) >= 18:
+        return True
+    else:
+        response = input("Are you here with a parent or guardian? (Y/y) (N/n)")
+        if response.upper() == "Y":
+            return True
+        else:
+            return False
+
 def datify(number):
     if number == 1 or number == 21:
         return str(number) + "st"
